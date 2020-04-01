@@ -57,7 +57,7 @@ object SchemaHelper {
     if (result != null) { // Return the name based match
       result
     } else if (nullIndex != -1 && size == 2) { // Return the non null type.
-      types.get(i - nullIndex)
+      types.get(i - nullIndex - 1)
     } else {
       sys.error(s"Cannot find subschema for type [$fullName] in ${schema.getTypes}")
     }
